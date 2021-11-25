@@ -1,0 +1,60 @@
+<htmllang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+        <!--NO BORRE NINGUNA DE ESTAS MARICADAS O SE VA TODO A LA ....-->
+        <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+	    <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/datetime/1.1.1/js/dataTables.dateTime.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+	    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/datetime/1.1.1/css/dataTables.dateTime.min.css">
+        <script src="../js/produccion-get.js"></script>
+        <script src="../js/funcionario-get.js"></script>
+        <script src="../js/servicio-get.js"></script>
+        <script src="../js/funcionesFiltro.js"></script>
+
+        <html xmlns:th="http://www.thymeleaf.org"></html>
+  </head>
+  <body>
+    <table border="0" cellspacing="5" cellpadding="5">
+        <tbody><tr>
+            <!--Input fecha minima-->
+            <td>Desde:</td>
+            <td><input type="text" id="min" name="min"></td>
+            <!--Menu desplegable Funcionario-->
+            <td><select class="select-table-filter" data-table="order-table">
+                <option selected="true" disabled value="">Seleccione funcionario</option> 
+                <option value="Hari Namakura">Hari Namakura</option>
+                <option value="Diego Angarita">Diego Angarita</option>
+                <option value="Esteban Ayala">	Esteban Ayala</option>
+                </select></td>
+        </tr>
+        <tr>
+            <!--Input Fecha maxima-->
+            <td>Hasta:</td>
+            <td><input type="text" id="max" name="max"></td>
+            <!--Menu desplegable Servicio-->
+            <td><select type="search" class="select-table-filter" data-table="order-table">
+                <option selected="true" disabled value="">Seleccione Servicio</option> 
+                  <option value="lavado">Lavado</option>
+                  <option value="secado">Secado</option>
+                </select></td>
+        </tr>
+        
+    </tbody></table>
+
+    <!--Tabla de datos-->
+
+    <!-- <div class="div-listado" id="listado"></div> -->
+        <table id="TablaDatos" class="order-table" style="width:100%">
+            <thead> 
+                <tr>
+                    <th>Vehiculo</th>
+                    <th>Funcionario</th>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            </table>
+  </body>
+</html>
